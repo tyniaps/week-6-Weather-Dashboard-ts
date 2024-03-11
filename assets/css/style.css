@@ -1,0 +1,45 @@
+#mainHdr{
+    margin-top: 30px;
+}
+
+#currentForecast{
+   border-style: solid;
+   border-width: thin;
+   border-radius: 10px;
+   
+   width: 1120px;
+   position: relative;
+   left: 400px;
+   bottom: 100px;
+}
+
+#previousSearches{
+    position: relative;
+    left: 10px;
+    top: 25px;
+}
+
+#fiveDayForcHdr {
+    position: relative;
+    left: 400px;
+    bottom: 60px;
+}
+
+.fiveDayForcCard {
+    border-style: solid;
+    border-width: thin;
+    border-radius: 10px;
+    width: 300px;
+    position: relative;
+    left: 400px;
+    bottom: 50px;
+}
+
+#searchBar {
+    width: 370px;
+}
+
+#citySearchHdr {
+    position: relative;
+    left: 15px;
+}
