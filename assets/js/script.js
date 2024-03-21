@@ -55,4 +55,13 @@ function getWeatherFromAPI() {
             forecastIcon.src = iconURL;
             forecastIcon.alt = description;
 
+            showImage();
 
+        }
+       
+        function showImage () {
+            const weatherIcon = document.getElementById("iconDisplay");
+            weatherIcon.style.display = 'block'
+        }
+
+    }
