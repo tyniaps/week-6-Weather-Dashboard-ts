@@ -28,6 +28,17 @@ function getWeatherFromAPI() {
        
         currentForecastInfo.innerHTML = '';
 
+        if(data.error) {
+            alert("There seems to be a problem, please try again");
+        } else {
+       
+            const cityName = data.name
+            const temperature = Math.round(data.main.temp - 273.15);
+            const windSpeed = data.wind.speed
+            const humidity = data.main.humidity
+            const iconCode = data.weather[0].icon;
+            const iconURL = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
+
 }
 
 
