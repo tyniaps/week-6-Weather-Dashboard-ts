@@ -8,4 +8,7 @@ function getWeatherFromAPI() {
     alert("Please enter a city");
     return;
   }
+
+  const queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=${apiKey}`;
+
 }
