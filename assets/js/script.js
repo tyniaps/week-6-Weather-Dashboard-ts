@@ -21,6 +21,13 @@ function getWeatherFromAPI() {
     alert("Error fetching weather forecast data, please try again");
     });
 
+    function displayCurrentForecast(data) {
+        const searchedCity = document.getElementById("currentCity");
+        const currentForecastInfo = document.getElementById("currentWeatherDetails");
+        const forecastIcon = document.getElementById("iconDisplay");
+       
+        currentForecastInfo.innerHTML = '';
+
 }
 
 
