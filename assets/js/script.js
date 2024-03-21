@@ -41,4 +41,18 @@ function getWeatherFromAPI() {
 
 }
 
+            const cityNameHTML = 
+           `<h3 id= "cityNameDisplay">${cityName}<h3>`
+     
+     
+            const currentForecastHTML =
+           `<p id="tempDisplay">${temperature}℃<p>
+            <p id ="windSpeedDisplay">${windSpeed} mps<p>
+            <p id ="humidityDisplay">${humidity}%<p>`;
+
+            searchedCity.innerHTML = cityNameHTML;
+            currentForecastInfo.innerHTML = currentForecastHTML;
+            forecastIcon.src = iconURL;
+            forecastIcon.alt = description;
+
 
