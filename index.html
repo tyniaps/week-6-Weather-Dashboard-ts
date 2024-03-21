@@ -27,7 +27,7 @@
             <div class="container-fluid">
               <form class="d-flex" role="search">
                 <input class="form-control me-2" id="search-bar" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" id="search-button" type="submit">Search</button>
+                <button class="btn btn-outline-success" id="search-button" type="submit" onclick="getWeatherFromAPI()">Search</button>
               </form>
             </div>
           </nav>
@@ -40,12 +40,22 @@
             </ul>
           </div>
 
-          <div id="currentForecast">
-            <h3> City Name Here </h3>
-            <p>Temperature:</p>
-            <p>Wind Speed:</p>
-            <p>Humidity:</p>
-          </div>
+
+              <section id ="currentForecast">
+                  
+                <div id="currentCity">
+                      <h3 id="cityNameDisplay"> City Name Here </h3>
+                    </div>
+
+                  <div id="iconDisplay"></div>
+          
+                <div id="currentWeatherDetails">
+                  <p id ="tempDisplay">Temperature:</p>
+                  <p id ="windSpeedDisplay">Wind Speed:</p>
+                  <p id ="humidityDisplay">Humidity:</p>
+                </div>
+                 
+              </section>
 
           <h4 id="fiveDayForcHdr"> 5 Day Forecast: </h4>
 
@@ -60,7 +70,7 @@
 
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-   <script src= "/assets/js/script.js"></script>
+  <script src= "/assets/js/script.js"></script>
 
   </body>
 </html>
