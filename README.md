@@ -27,8 +27,12 @@ SO THAT I can plan a trip accordingly.
 
 ## Screenshot
 
+![Screenshot of Weather Dashboard Challenge](<Screenshot 2024-03-22 090545.png>)
+
 
 ## Link to Deployed Application
+
+https://tyniaps.github.io/week-6-Weather-Dashboard-ts/
 
 
 
