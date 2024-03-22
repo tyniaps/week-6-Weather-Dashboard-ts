@@ -20,54 +20,74 @@ function getWeatherFromAPI() {
       }
       return response.json();  
       
+      })
+    .then(data => {
+      displayCurrentForecast(data);
     })
-    .then(function (data) {
-     displayCurrentForecast(data);
-    })
+
+      .catch(function (error) {
+       console.error("Error fetching weather forecast data:", error);
+       alert("Unable to fetch weather forecast data. Please try again.");
+      }); 
+      
+      
+      function displayCurrentForecast() {
+
+            const searchedCity = document.getElementById("currentCity");
+            const currentForecastInfo = document.getElementById("currentWeatherDetails");
+            const forecastIcon = document.getElementById("iconDisplay");
+          
+            currentForecastInfo.innerHTML = '';
+
+            if (data.cod === '404') {
+              currentForecastInfo.innerHTML = `<p>${data.message}</p>`
+            } else {
+                    const cityName = data.name
+                    const temperature = Math.round(data.main.temp - 273.15);
+                    const windSpeed = data.wind.speed
+                    const humidity = data.main.humidity
+                    const iconCode = data.weather[0].icon;
+                    const iconURL = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
+
+
+                    const cityNameHTML = 
+                    `<h3 id= "cityNameDisplay">${cityName}<h3>`;
+     
+     
+                    const currentForecastHTML =
+                    `<p id="tempDisplay">${temperature}℃<p>
+                     <p id ="windSpeedDisplay">${windSpeed} mps<p>
+                     <p id ="humidityDisplay">${humidity}%<p>`;
+
+                    searchedCity.innerHTML = cityNameHTML;
+                    currentForecastInfo.innerHTML = currentForecastHTML;
+                    forecastIcon.src = iconURL;
+                    forecastIcon.alt = description;
+           
+                    showImage();  
+                  }  
+                    
+                  
+
+                    function showImage () {
+                    const weatherIcon = document.getElementById("iconDisplay");
+                    weatherIcon.style.display = 'block'
+                    }     
+          
+
+       }
+
+
+}     
+       
+          
+          
+          
+
+
+          
+                 
   
-    };
+            
 
-    function displayCurrentForecast(data) {
-        const searchedCity = document.getElementById("currentCity");
-        const currentForecastInfo = document.getElementById("currentWeatherDetails");
-        const forecastIcon = document.getElementById("iconDisplay");
-       
-        currentForecastInfo.innerHTML = '';
 
-        if(data.error) {
-            alert("There seems to be a problem, please try again");
-        } else {
-       
-            const cityName = data.name
-            const temperature = Math.round(data.main.temp - 273.15);
-            const windSpeed = data.wind.speed
-            const humidity = data.main.humidity
-            const iconCode = data.weather[0].icon;
-            const iconURL = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
-
-}
-
-            const cityNameHTML = 
-           `<h3 id= "cityNameDisplay">${cityName}<h3>`
-     
-     
-            const currentForecastHTML =
-           `<p id="tempDisplay">${temperature}℃<p>
-            <p id ="windSpeedDisplay">${windSpeed} mps<p>
-            <p id ="humidityDisplay">${humidity}%<p>`;
-
-            searchedCity.innerHTML = cityNameHTML;
-            currentForecastInfo.innerHTML = currentForecastHTML;
-            forecastIcon.src = iconURL;
-            forecastIcon.alt = description;
-
-            showImage();
-
-        
-       
-        function showImage () {
-            const weatherIcon = document.getElementById("iconDisplay");
-            weatherIcon.style.display = 'block'
-        }
-
-    }
