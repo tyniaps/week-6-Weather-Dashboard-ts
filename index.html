@@ -27,16 +27,15 @@
             <div class="container-fluid">
               <form class="d-flex" role="search">
                 <input class="form-control me-2" id="search-bar" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" id="search-button" type="submit" onclick="getWeatherFromAPI()">Search</button>
+                <button onclick="getWeatherFromAPI()"class="btn btn-outline-success" id="search-button" type="submit" >Search</button>
               </form>
             </div>
           </nav>
 
-          <div class="card" id="previousSearches" style="width: 23rem;">
+          <div class="card" id="previousSearches" style="width: 28.2rem;">
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">An item</li>
-              <li class="list-group-item">A second item</li>
-              <li class="list-group-item">A third item</li>
+              <li class="list-group-item">Recent Cities</li>
+              
             </ul>
           </div>
 
@@ -44,27 +43,25 @@
               <section id ="currentForecast">
                   
                 <div id="currentCity">
-                      <!-- <h3 id="cityNameDisplay"> City Name Here </h3> -->
+                      <h3 id="cityNameDisplay"> Current Weather: </h3>
                     </div>
 
                   <div id="iconDisplay"></div>
           
                 <div id="currentWeatherDetails">
-                  <!-- <p id ="tempDisplay">Temperature:</p>
-                  <p id ="windSpeedDisplay">Wind Speed:</p>
-                  <p id ="humidityDisplay">Humidity:</p> -->
+                 
                 </div>
                  
               </section>
 
           <h4 id="fiveDayForcHdr"> 5 Day Forecast: </h4>
 
-          <div class="fiveDayForcCard" id="day1">
+          <!-- <div class="fiveDayForcCard" id="day1">
             <h4> Date Here </h4>
             <p>Temperature:</p>
             <p>Wind Speed:</p>
             <p>Humidity:</p>   
-          </div>
+          </div> -->
 
     </main>
 

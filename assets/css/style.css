@@ -6,23 +6,33 @@
    border-style: solid;
    border-width: thin;
    border-radius: 10px;
+   border-color: rgb(166, 219, 166);
    
-   width: 1120px;
+   width: 1030px;
+   height: 200px;
    position: relative;
-   left: 400px;
-   bottom: 100px;
+   left: 480px;
+   bottom: 17px;
+   background-color: rgb(166, 219, 166);
+}
+
+#cityNameDisplay{
+    position:relative;
+    left:15px;
+    top: 10px;
 }
 
 #previousSearches{
     position: relative;
     left: 10px;
     top: 25px;
+    
 }
 
 #fiveDayForcHdr {
     position: relative;
-    left: 400px;
-    bottom: 60px;
+    left: 500px;
+    
 }
 
 .fiveDayForcCard {
